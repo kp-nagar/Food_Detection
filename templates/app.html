@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snacks Classifier</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/dropzone.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light bg-light justify-content-center">
+            <b><a class="navbar-brand" href="#">Snacks Classifier</a></b>
+        </nav>
+
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col card-wrapper" data-player="brinjal">
+                        <div class="card border-0">
+                            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                                <img class="w-100 h-100" src="{{url_for('static', filename='images/samosa.jpg')}}" alt="Card image cap">
+                            </div>
+                            <div class="card-body text-center mt-1">
+                                <h6 class="text-uppercase card-title">Samosa</h6>
+                                </p>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="col card-wrapper" data-player="cabbage">
+                            <div class="card border-0">
+                                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                                    <img class="w-100 h-100" src="{{url_for('static', filename='images/jalebi.jpg')}}" alt="Card image cap">
+                                </div>
+                                <div class="card-body text-center mt-1">
+                                    <h6 class="text-uppercase card-title">Jalebi</h6>
+                                    </p>
+                                </div>
+                            </div>
+                    </div>            
+                    <div class="col card-wrapper" data-player="carrot">
+                        <div class="card border-0">
+                            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                                <img class="w-100 h-100" src="{{url_for('static', filename='images/chai.jpg')}}" alt="Card image cap">
+                            </div>
+                            <div class="card-body text-center mt-1">
+                                <h6 class="text-uppercase card-title">Chai</h6>
+                                </p>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-12 mx-auto">
+                            <form class="dropzone" id="dropzone">
+                                <div class="dz-message needsclick">
+                                    <img src="{{url_for('static', filename='images/upload.png')}}" width="50vw" height="50vw"><br>
+                                    <span class="note needsclick">Drop files here or click to upload</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-3 mx-auto">
+                            <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="alert alert-success" id="resultHolder">
+                            <strong>Success!</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/dropzone.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</html>
